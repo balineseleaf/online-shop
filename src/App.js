@@ -1,7 +1,7 @@
 import './App.css';
 import Api from "./utils/Api";
 import md5 from 'md5';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import Filter from './components/Filter/Filter';
 
