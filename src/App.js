@@ -7,7 +7,7 @@ import Filter from './components/Filter/Filter';
 
 function App() {
 
-  const apiUrl = 'http://api.valantis.store:40000/';
+  const apiUrl = 'https://api.valantis.store:41000/';
   const [products, setProducts] = useState([]);
   const [productIds, setProductIds] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
