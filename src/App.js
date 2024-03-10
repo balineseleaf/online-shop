@@ -7,7 +7,7 @@ import Filter from './components/Filter/Filter';
 
 function App() {
 
-  const apiUrl = 'http://api.valantis.store:40000/';
+  const apiUrl = 'https://api.valantis.store:41000/';
   const [products, setProducts] = useState([]);
   const [productIds, setProductIds] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -185,8 +185,11 @@ function App() {
                 products?.map((product, index) => (
                   <div key={index} className="product__item">
                     <h3 className='product__header'>{product.product}</h3>
-                    <p className='product__brand'>Бренд: {product.brand ? product.brand : "-"}</p>
-                    <p className='product__price'>Цена: {product.price}</p>
+                    <div className='product__info'>
+                      <p className='product__id'>{product.id}</p>
+                      <p className='product__brand'>Бренд: {product.brand ? product.brand : "-"}</p>
+                      <p className='product__price'>Цена: {product.price}</p>
+                    </div>
                   </div>
                 ))
                 : <p className="product-notfound-list">По вашему запросу ничего не найдено.</p>
